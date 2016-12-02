@@ -50,7 +50,6 @@ define([ 'angular',
             it("should have matching defaults", function () {
                 expect(scope.view.details).toEqual({});
             });
-
             /*
             * Test base functionality
             */
