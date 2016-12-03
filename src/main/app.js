@@ -35,12 +35,14 @@ define([ 'angular',
          'tmdb/directives/movieDetail',
          'tmdb/directives/similarMovies',
          'tmdb/directives/movieCast',
-         'tmdb/directives/movieCrew' ], 
+         'tmdb/directives/movieCrew',
+         'tmdb/directives/moviePopularity' ], 
     function( angular, config, $resource, $location, LocalStorageModule, 
               TMDBAPIService, SearchController, HomeController, MovieController, PersonController, 
               RemoteImageLoader, searchDirective, popularMoviesDirective, 
               personDetailDirective, personCrewDirective, personCastDirective,
-              movieDetailDirective, similarMoviesDirective, movieCastDirective, movieCrewDirective ) {
+              movieDetailDirective, similarMoviesDirective, movieCastDirective, movieCrewDirective,
+              moviePopularity ) {
     	"use strict";
 
         /** @constructs app */
@@ -74,6 +76,7 @@ define([ 'angular',
         app.directive( "similarMovies", similarMoviesDirective );
         app.directive( "movieCast", movieCastDirective );
         app.directive( "movieCrew", movieCrewDirective );
+        app.directive( "moviePopularity", moviePopularity );
 
         app.config(['$routeProvider', function($routeProvider) {
             $routeProvider.when( '/', { templateUrl: '/tmdb/partials/home/home.html', controller: 'HomeController' } );

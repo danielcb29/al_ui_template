@@ -35,6 +35,7 @@
             <br />
             <span ng-if="detail.details.homepage"><a href="{{ detail.details.homepage }}" target=_new>{{ detail.details.homepage }}</a></span>
         </div>
+        <movie-popularity ng-model="detail.details.vote_average"/>
         <div class="col-md-12" ng-if="detail.details.similar.results.length != 0">
             <similar-movies ng-model="detail.details.similar.results" />
         </div>
